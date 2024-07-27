@@ -15,7 +15,7 @@ dataset_size = 100
 # open the camera 
 vid = cv2.VideoCapture(0)
 # loop through for all signs individually 
-for i in range(11, number_of_classes): 
+for i in range(4, number_of_classes): 
     # if the directory does not exist, create it
     if not os.path.exists(os.path.join(DATA_DIR, str(i))):
         os.makedirs(os.path.join(DATA_DIR, str(i)))

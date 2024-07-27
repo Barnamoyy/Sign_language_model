@@ -35,13 +35,13 @@ model.add(LSTM(128, activation='relu', return_sequences=True))
 model.add(LSTM(64, activation='relu', return_sequences=False))
 model.add(Dense(64, activation='relu'))
 model.add(Dense(32, activation='relu'))
-model.add(Dense(3, activation='softmax'))
+model.add(Dense(26, activation='softmax'))
 
 # Compile the model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, epochs=2000, batch_size=32, validation_data=(X_test, y_test))
 
 # predict the labels for the test set
 y_predict = model.predict(X_test)
